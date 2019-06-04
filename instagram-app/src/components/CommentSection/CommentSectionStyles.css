@@ -30,6 +30,7 @@ form {
     width: 8%;
     height: 8%;
 }
-.time-stamp {
-    
+.heart-icon {
+    display: block;
+    width: 5%;
 }
