@@ -9,9 +9,15 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      instaData: dummyData
+      instaData: []
     }
   }
+  componentDidMount = () => {
+    this.setState({
+      instaData: dummyData
+    })
+  }
+
   render () {
     return (
       /* This is where we want to have the  searchbar, inside h1*/
