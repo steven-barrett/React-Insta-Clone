@@ -1,0 +1,20 @@
+.App {
+    text-align: center;
+  }
+  
+.Header {
+    display: flex;    
+    font-size: 20px;
+    justify-content: flex-start;
+    border-bottom: lightgray solid 2px;
+    margin-bottom: 5px;
+  }
+  
+  .instagram-icon {
+    width: 6%;
+  }
+
+  .reset-username {
+    
+  }
+  

@@ -16,9 +16,11 @@ class CommentSection extends React.Component {
     addNewComment = (commentText) => {
         let newComment = {
             id: Math.floor(Math.random() * 2),
+            // localStorage should never be empty as we can't get here without it   >>> Math.random().toString(36).substr(2, 9) <<< Random Username                    
+            // username: localStorage.getItem('username'),
             username: Math.random().toString(36).substr(2, 9),
             text: commentText
-        }
+        }        
         this.setState(prevState => {                        
             return {
                 comments: [...prevState.comments, newComment]
