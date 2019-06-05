@@ -1,0 +1,36 @@
+.post-card {
+    padding-bottom: 20px;
+}
+
+.post-info {    
+    text-align: left;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+}
+
+.username {    
+   text-align: left;
+   padding-left: 50px;
+}
+
+.form-input {
+    width: 99%;
+    height: 100%;    
+}
+form {
+    height: 35px;
+}
+
+.thumb-image {
+    width: 8%;
+    height: 8%;
+}
+.heart-icon {
+    display: block;
+    width: 5%;
+}
