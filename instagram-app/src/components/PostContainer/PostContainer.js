@@ -5,16 +5,16 @@ import PropTypes from 'prop-types';
 import CommentSection from 'C:/Users/Steve.LAPTOP-2ASM0AJ1/React-Insta-Clone/instagram-app/src/components/CommentSection/CommentSection';
 
 class PostContainer extends React.Component {
-    constructor() {
-        super();
-    }
+    // constructor() {
+    //     super();
+    // }
 
     render () {
         return (
             <div className="post-container">                
               {this.props.data.map(item => { 
                 return (
-                    <CommentSection item={item} />
+                    <CommentSection item={item} key={item.id} />
                       );      
               })}
             </div>
@@ -24,7 +24,7 @@ class PostContainer extends React.Component {
 PostContainer.propTypes = {
     data: PropTypes.arrayOf(
         PropTypes.shape({
-            id: PropTypes.number,
+            id: PropTypes.string,
             username: PropTypes.string,
             imageUrl: PropTypes.string,
             comments: PropTypes.arrayOf(

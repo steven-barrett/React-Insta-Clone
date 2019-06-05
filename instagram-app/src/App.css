@@ -26,7 +26,9 @@
 .Header {
   display: flex;
   font-size: 20px;
-  font-style: oblique;
+  justify-content: flex-start;
+  border-bottom: lightgray solid 2px;
+  margin-bottom: 5px;
 }
 
 .instagram-icon {
