@@ -1,0 +1,14 @@
+.wrapper-div {
+    display: block;
+    margin: 0 auto;
+    align-content: center;
+    
+}
+.form-input {
+    width: 100%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.h1-login {
+    text-align: center;
+}
