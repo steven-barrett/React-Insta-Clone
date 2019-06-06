@@ -4,7 +4,26 @@ import dummyData from '../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer';
 
+import styled from 'styled-components';
 import './PostContainerStyles.css';
+
+// styled components
+const WrapperDiv = styled.div`
+width: 100%;
+height: 100%;
+display: flex;    
+font-size: 20px;
+justify-content: flex-start;
+border-bottom: lightgray solid 2px;
+margin-bottom: 5px;
+`;
+const Div = styled.div`
+text-align: center;
+`;
+const P = styled.p`
+`;
+const Img = styled.img`
+`;
 
 class PostsPage extends React.Component {
     constructor(){
@@ -41,7 +60,7 @@ class PostsPage extends React.Component {
       resetUserName = () => {
         // localStorage.removeItem('username');
       }
-      render() {
+      render() {    
         // Determine which array to pass to PostContainer
         let arrayToUse = [];
         if (this.state.filteredData.length > 0) {
@@ -53,15 +72,14 @@ class PostsPage extends React.Component {
   
         return (
         /* This is where we want to have the  searchbar, inside h1*/
-        <div className="App">
-        <div className="Header">
-          <img src='https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-57-512.png' className ='instagram-icon' alt='Instagram' />  
-          <p>Instagram</p>      
-          <SearchBar filterSearchResults={this.filterSearchResults} />
-          {/* <button className='reset-username' onClick={this.resetUserName}>Reset Username</button> */}
-        </div>
+        <Div>
+        <WrapperDiv>
+          <Img src='https://cdn2.iconfinder.com/data/icons/instagram-ui/48/jee-57-512.png' className ='instagram-icon' alt='Instagram' />  
+          <P>Instagram</P>      
+          <SearchBar filterSearchResults={this.filterSearchResults} />          
+        </WrapperDiv>
         <PostContainer data={arrayToUse} />
-      </div>
+      </Div>
         );
       }
 

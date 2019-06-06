@@ -1,6 +1,13 @@
 import React from 'react';
 
+import styled from 'styled-components';
 import './SearchBarStyles.css';
+
+// Styled components
+const Form = styled.form`
+`;        
+const Input = styled.input`        
+`;
 
 class SearchBar extends React.Component {
     constructor() {
@@ -22,14 +29,14 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-        <form onSubmit={this.filterSearchResults}>
-            <input className='search-input'
+        <Form onSubmit={this.filterSearchResults}>
+            <Input className='search-input'
             placeholder='Search...'
             value={this.state.searchTerm}
             name="searchTerm"
             onChange={this.handleChanges}
             />
-        </form>              
+        </Form>              
         );
     }
 }
